@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1, .cls-6 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #eb564c;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #b4433c;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: #eb564c;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="グループ_132" data-name="グループ 132" transform="translate(-454 -3367)">
+    <g id="長方形_39" data-name="長方形 39" class="cls-1" transform="translate(454 3367)">
+      <rect class="cls-5" width="100" height="100" rx="50"/>
+      <rect class="cls-6" x="1.5" y="1.5" width="97" height="97" rx="48.5"/>
+    </g>
+    <g id="グループ_47" data-name="グループ 47" transform="translate(-22 -2)">
+      <rect id="長方形_56" data-name="長方形 56" class="cls-2" width="44" height="32.762" rx="1" transform="translate(504 3400)"/>
+      <rect id="長方形_57" data-name="長方形 57" class="cls-3" width="37" height="23" transform="translate(507.5 3403)"/>
+      <circle id="楕円形_19" data-name="楕円形 19" class="cls-4" cx="1.5" cy="1.5" r="1.5" transform="translate(525.026 3428.399)"/>
+      <rect id="長方形_58" data-name="長方形 58" class="cls-2" width="11" height="3" transform="translate(521.032 3432.762)"/>
+      <path id="長方形_59" data-name="長方形 59" class="cls-4" d="M3,0H16a3,3,0,0,1,3,3V3a0,0,0,0,1,0,0H0A0,0,0,0,1,0,3V3A3,3,0,0,1,3,0Z" transform="translate(517.043 3435.762)"/>
+    </g>
+  </g>
+</svg>

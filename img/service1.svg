@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1, .cls-3, .cls-5 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #eb564c;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #91231c;
+      }
+
+      .cls-3 {
+        stroke: #fff;
+        stroke-width: 2.8px;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="グループ_319" data-name="グループ 319" transform="translate(-210 -3748.018)">
+    <g id="グループ_320" data-name="グループ 320">
+      <g id="長方形_38" data-name="長方形 38" class="cls-1" transform="translate(210 3748.018)">
+        <rect class="cls-4" width="100" height="100" rx="50"/>
+        <rect class="cls-5" x="1.5" y="1.5" width="97" height="97" rx="48.5"/>
+      </g>
+      <circle id="楕円形_18" data-name="楕円形 18" class="cls-2" cx="22" cy="22" r="22" transform="translate(238 3776.018)"/>
+      <line id="線_9" data-name="線 9" class="cls-3" x2="6" y2="7.368" transform="translate(254 3788.018)"/>
+      <line id="線_10" data-name="線 10" class="cls-3" y1="13.684" transform="translate(260 3794.334)"/>
+      <line id="線_11" data-name="線 11" class="cls-3" x1="6" y2="7.368" transform="translate(260 3788.018)"/>
+      <line id="線_12" data-name="線 12" class="cls-3" x2="12" transform="translate(254 3795.913)"/>
+      <line id="線_13" data-name="線 13" class="cls-3" x2="12" transform="translate(254 3802.228)"/>
+    </g>
+  </g>
+</svg>

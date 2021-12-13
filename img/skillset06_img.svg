@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110" height="110.001" viewBox="0 0 110 110.001">
+  <defs>
+    <filter id="合体_4" x="0" y="0" width="110" height="110.001" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="グループ_400" data-name="グループ 400" transform="translate(-541.5 -1225.5)">
+    <g id="グループ_335" data-name="グループ 335" transform="translate(591.583 1250.582)">
+      <path id="パス_478" data-name="パス 478" d="M420.006,565.108,400.139,569.8l14,14.858Z" transform="translate(-383.171 -565.108)" fill="#999"/>
+      <line id="線_10" data-name="線 10" x1="24.679" y2="22.9" transform="translate(0 12.133)" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="7.506"/>
+    </g>
+    <g id="グループ_336" data-name="グループ 336" transform="translate(566 1276.5)">
+      <path id="パス_479" data-name="パス 479" d="M395.064,626.273l19.867-4.693-14-14.859Z" transform="translate(-395.064 -591.24)" fill="#999"/>
+      <line id="線_11" data-name="線 11" y1="22.9" x2="24.679" transform="translate(12.156)" fill="none" stroke="#999" stroke-miterlimit="10" stroke-width="7.506"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 541.5, 1225.5)" filter="url(#合体_4)">
+      <path id="合体_4-2" data-name="合体 4" d="M-5566,15.5a26.749,26.749,0,0,1,.266-3.765A26.722,26.722,0,0,1-5569.5,12,26.5,26.5,0,0,1-5596-14.5,26.5,26.5,0,0,1-5569.5-41,26.5,26.5,0,0,1-5543-14.5a26.769,26.769,0,0,1-.266,3.767A26.73,26.73,0,0,1-5539.5-11,26.5,26.5,0,0,1-5513,15.5,26.5,26.5,0,0,1-5539.5,42,26.5,26.5,0,0,1-5566,15.5Z" transform="translate(5609.5 54.5)" fill="#fff"/>
+    </g>
+    <text id="検証" transform="translate(611 1301)" fill="#464646" font-size="16" font-family="NotoSansJP-Bold, Noto Sans JP" font-weight="700"><tspan x="-16" y="0">検証</tspan></text>
+    <text id="仮説" transform="translate(582 1271)" fill="#464646" font-size="16" font-family="NotoSansJP-Bold, Noto Sans JP" font-weight="700"><tspan x="-16" y="0">仮説</tspan></text>
+  </g>
+</svg>

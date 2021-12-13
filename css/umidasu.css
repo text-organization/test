@@ -1,0 +1,3315 @@
+@charset "UTF-8";
+@-webkit-keyframes expansion {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes expansion {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*	1280px ~ PC（初期値）ここから*/
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+header .site-logo {
+  position: absolute;
+  top: 20px;
+  left: 80px;
+}
+
+header .site-logo img {
+  width: 250px;
+}
+
+header .hamburger {
+  position: fixed;
+  top: 22px;
+  right: 45px;
+  width: 60px;
+  height: 60px;
+  background-color: #EB564C;
+  border-radius: 8px;
+  z-index: 21;
+  cursor: pointer;
+}
+
+header .hamburger span {
+  position: absolute;
+  left: 15px;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 1px;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+header .hamburger span:nth-of-type(1) {
+  top: 20px;
+}
+
+header .hamburger span:nth-of-type(2) {
+  top: 30px;
+}
+
+header .hamburger span:nth-of-type(3) {
+  top: 40px;
+}
+
+header .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #EB564C;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 20;
+}
+
+header .nav .menu {
+  position: absolute;
+  top: 150px;
+  left: 80px;
+}
+
+header .nav .menu li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px;
+  font-size: 2.4rem;
+}
+
+header .nav .menu li a {
+  color: #fff;
+  font-weight: bold;
+}
+
+header .nav .menu li:nth-of-type(8) {
+  margin-bottom: 32px;
+}
+
+header .nav .menu li .mr {
+  margin-right: 100px;
+}
+
+header .nav .menu li .mr::after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  top: -20%;
+  left: 50px;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+}
+
+header .nav .menu li .btn {
+  display: block;
+  width: 400px;
+  height: 67px;
+  line-height: 67px;
+  border-radius: 8px;
+  color: #EB564C;
+  font-size: 1.8rem;
+  text-align: center;
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+header .nav .menu li .app {
+  margin-right: 32px;
+  background-color: #fff;
+}
+
+header .nav .menu li .login {
+  color: #fff;
+  border: #fff 3px solid;
+}
+
+header .active {
+  opacity: 1;
+  visibility: visible;
+}
+
+header .active span:nth-of-type(1) {
+  top: 30px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+header .active span:nth-of-type(2) {
+  top: 30px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+header .active span:nth-of-type(3) {
+  top: 30px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main .mobileIndentAdd {
+  display: none;
+}
+
+main h2 {
+  display: inline;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 4rem;
+  color: #000;
+  font-weight: bold;
+  position: relative;
+  z-index: 3;
+}
+
+main h2::before {
+  position: absolute;
+  right: -4%;
+  z-index: -1;
+  content: '';
+  display: inline;
+  width: 50px;
+  height: 50px;
+  background: #F4867E;
+  border-radius: 50%;
+}
+
+main h2::after {
+  position: absolute;
+  top: -35%;
+  right: -11%;
+  z-index: -2;
+  content: '';
+  display: inline;
+  width: 70px;
+  height: 70px;
+  background: #FFEBEA;
+  border-radius: 50%;
+}
+
+main .firstview {
+  width: 100%;
+  padding-top: 40px;
+  margin-bottom: 120px;
+}
+
+main .firstview__wrap__section01 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 56px 0;
+}
+
+main .firstview__wrap__section01__item01 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 250px;
+  margin: 0 40px;
+}
+
+main .firstview__wrap__section01__item01 .firstview__item01__circle {
+  width: 200px;
+  height: 200px;
+  -webkit-box-shadow: 0 0 10px 5px #EB564C;
+          box-shadow: 0 0 10px 5px #EB564C;
+  border-radius: 50%;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #464646;
+  text-align: center;
+  line-height: 200px;
+}
+
+main .firstview__wrap__section01__item01 .firstview___item01_text {
+  margin-top: 24px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #464646;
+  text-align: center;
+}
+
+main .firstview__wrap__section01__item02 {
+  margin: 0 40px 80px;
+}
+
+main .firstview__wrap__section01__item03 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 250px;
+  margin: 0 40px;
+}
+
+main .firstview__wrap__section01__item03 .firstview__item03_circle {
+  width: 200px;
+  height: 200px;
+  -webkit-box-shadow: 0 0 10px 5px #EBAE4C;
+          box-shadow: 0 0 10px 5px #EBAE4C;
+  border-radius: 50%;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #464646;
+  text-align: center;
+  line-height: 200px;
+}
+
+main .firstview__wrap__section01__item03 .firstview__item03_text {
+  margin-top: 24px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #464646;
+  text-align: center;
+}
+
+main .firstview__wrap__section02 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #464646;
+  text-align: center;
+}
+
+main .firstview__wrap__section02 span {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+main .firstview__wrap__section02 span:nth-of-type(1) {
+  color: #EB564C;
+}
+
+main .firstview__wrap__section02 span:nth-of-type(2) {
+  color: #EBAE4C;
+}
+
+main .firstview__wrap__section02 span:nth-of-type(3) {
+  background: -webkit-gradient(linear, left top, right top, from(#EB564C), to(#EBAE4C));
+  background: -webkit-linear-gradient(left, #EB564C, #EBAE4C);
+  background: -o-linear-gradient(left, #EB564C, #EBAE4C);
+  background: linear-gradient(to right, #EB564C, #EBAE4C);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+main .skillset {
+  width: 100%;
+  padding-top: 40px;
+  margin-bottom: 120px;
+}
+
+main .skillset h3 {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #464646;
+  text-align: center;
+  margin: 40px 0 32px;
+}
+
+main .skillset h3::before {
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  content: '';
+  display: inline;
+  width: 20px;
+  height: 4px;
+  background: #464646;
+  border-radius: 2px;
+}
+
+main .skillset h3::after {
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  content: '';
+  display: inline;
+  width: 20px;
+  height: 4px;
+  background: #464646;
+  border-radius: 2px;
+}
+
+main .skillset .skillset__sourceText {
+  text-align: right;
+  margin-top: 8px;
+}
+
+main .skillset .skillset__sourceText a {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #659AD8;
+}
+
+main .skillset__section01 {
+  width: 765px;
+  margin: 0 auto 56px;
+}
+
+main .skillset__section01_illsut {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  background: url(../img/skillset01_img.svg) no-repeat;
+  background-position: center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .skillset__section01_illsut::before {
+  position: absolute;
+  content: 'フィードバック';
+  display: inherit;
+  width: 126px;
+  height: 26px;
+  top: 50%;
+  left: 60px;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #464646;
+}
+
+main .skillset__section01_illsut::after {
+  position: absolute;
+  content: 'フィードバック';
+  display: inherit;
+  width: 126px;
+  height: 26px;
+  top: 50%;
+  right: -60px;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #464646;
+}
+
+main .skillset__section01_illsut .skillset__illsut_rotate img {
+  width: 79px;
+}
+
+main .skillset__section01_illsut .skillset__illsut_text01 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 24px 16px 0 16px;
+}
+
+main .skillset__section01_illsut .skillset__illsut_text01 p {
+  width: 250px;
+  height: 100px;
+  background: #F1EEE7;
+  padding-top: 25px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #464646;
+  text-align: center;
+  opacity: 0.9;
+}
+
+main .skillset__section01_illsut .skillset__illsut_text01 p:nth-of-type(2) {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  z-index: 2;
+  width: 79px;
+  background: none;
+  padding: 0;
+}
+
+main .skillset__section01_illsut .skillset__illsut_cnterText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 218px;
+  height: 218px;
+}
+
+main .skillset__section01_illsut .skillset__illsut_cnterText p {
+  position: relative;
+  width: 218px;
+  height: 218px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px 5px #D6D6D6;
+          box-shadow: 0 0 10px 5px #D6D6D6;
+  background: #fff;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #EB564C;
+  text-align: center;
+  line-height: 218px;
+}
+
+main .skillset__section01_illsut .skillset__illsut_cnterText div img {
+  width: 110px;
+}
+
+main .skillset__section01_illsut .skillset__illsut_cnterText div:nth-of-type(1) {
+  position: absolute;
+  top: -20px;
+  left: -50px;
+}
+
+main .skillset__section01_illsut .skillset__illsut_cnterText div:nth-of-type(2) {
+  position: absolute;
+  top: -20px;
+  right: -50px;
+}
+
+main .skillset__section01_illsut .skillset__illsut_cnterText div:nth-of-type(3) {
+  position: absolute;
+  bottom: -20px;
+  right: -50px;
+  z-index: 2;
+}
+
+main .skillset__section01_illsut .skillset__illsut_cnterText div:nth-of-type(4) {
+  position: absolute;
+  bottom: -20px;
+  left: -50px;
+  z-index: 1;
+}
+
+main .skillset__section01_illsut .skillset__illsut_cnterText::before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: inherit;
+  width: 79px;
+  height: 100px;
+  top: 30%;
+  left: -120px;
+  background: url(../img/skillset02_img.svg) no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+main .skillset__section01_illsut .skillset__illsut_cnterText::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: inherit;
+  width: 79px;
+  height: 100px;
+  top: 30%;
+  right: -120px;
+  background: url(../img/skillset02_img.svg) no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+main .skillset__section01_illsut .skillset__illsut_text02 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 16px 24px 16px;
+}
+
+main .skillset__section01_illsut .skillset__illsut_text02 p {
+  position: relative;
+  z-index: -1;
+  width: 250px;
+  height: 100px;
+  background: #F1EEE7;
+  padding-top: 25px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #464646;
+  text-align: center;
+  opacity: 0.9;
+}
+
+main .skillset__section01_illsut .skillset__illsut_text02 p:nth-of-type(2) {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  z-index: 2;
+  width: 79px;
+  background: none;
+  padding-top: 0;
+}
+
+main .skillset__section01__text {
+  width: 756px;
+  margin: 16px auto 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #464646;
+}
+
+main .skillset__section02 {
+  width: 660px;
+  margin: 0 auto;
+}
+
+main .skillset__section02_illsut {
+  width: 100%;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list__item {
+  padding: 12px 24px;
+  -webkit-box-shadow: 0 0 10px 3px #D6D6D6;
+          box-shadow: 0 0 10px 3px #D6D6D6;
+  border-radius: 8px;
+  margin: 12px 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #464646;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list__item:nth-of-type(8) {
+  padding: 20px 16px;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list__item:nth-of-type(9) {
+  font-size: 2.2rem;
+  color: #EB564C;
+  padding: 20px 24px;
+  -webkit-box-shadow: 0 0 10px 3px #EB564C;
+          box-shadow: 0 0 10px 3px #EB564C;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list__item:nth-of-type(10) {
+  padding: 12px 32px;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUpTrigger {
+  opacity: 0;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(1) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(2) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(3) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(4) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(5) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(6) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(7) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(8) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(9) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(10) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(11) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(12) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(13) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(14) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(15) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(16) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(17) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(18) {
+  -webkit-animation: fadeUpAnime 2s forwards;
+  animation: fadeUpAnime 2s forwards;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+main .skillset__section02__text {
+  width: 660px;
+  margin: 16px auto 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #464646;
+}
+
+main .engineerConcept {
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+main .engineerConcept__wrap {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+main .engineerConcept__wrap h3 {
+  position: relative;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #464646;
+  margin-left: 28px;
+  margin-top: 40px;
+}
+
+main .engineerConcept__wrap h3::before {
+  position: absolute;
+  top: 50%;
+  left: -28px;
+  content: '';
+  display: inline;
+  width: 20px;
+  height: 4px;
+  background: #EB564C;
+  border-radius: 2px;
+}
+
+main .engineerConcept__wrap__list {
+  margin-top: 16px;
+}
+
+main .engineerConcept__wrap__list li {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #464646;
+  margin-left: 28px;
+  margin-bottom: 8px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+main .engineerConcept__wrap__list li:nth-of-type(3) {
+  margin-bottom: 0;
+}
+
+main .engineerConcept__wrap__list:nth-of-type(2) li {
+  margin-bottom: 0;
+}
+
+main .engineerConcept__wrap__skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 24px;
+}
+
+main .engineerConcept__wrap__skill .engineerConcept__skill__box01 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 500px;
+  height: 250px;
+  -webkit-box-shadow: 0 0 10px 3px #EB564C;
+          box-shadow: 0 0 10px 3px #EB564C;
+  border-radius: 8px;
+  text-align: center;
+}
+
+main .engineerConcept__wrap__skill .engineerConcept__skill__box01 h4 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #EB564C;
+  margin-top: 32px;
+}
+
+main .engineerConcept__wrap__skill .engineerConcept__skill__box01 p {
+  margin-top: 24px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #464646;
+}
+
+main .engineerConcept__wrap__skill .engineerConcept__skill__box02 {
+  width: 500px;
+  height: 250px;
+  -webkit-box-shadow: 0 0 10px 3px #EBAE4C;
+          box-shadow: 0 0 10px 3px #EBAE4C;
+  border-radius: 8px;
+  text-align: center;
+}
+
+main .engineerConcept__wrap__skill .engineerConcept__skill__box02 h4 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #EBAE4C;
+  margin-top: 32px;
+}
+
+main .engineerConcept__wrap__skill .engineerConcept__skill__box02 p {
+  margin-top: 24px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #464646;
+}
+
+main .engineerConcept__wrap__text {
+  margin-top: 40px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #464646;
+  text-align: center;
+}
+
+main .skillUpTask {
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+main .skillUpTask__wrap {
+  width: 1080px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .skillUpTask__wrap__box01 {
+  width: 520px;
+}
+
+main .skillUpTask__wrap__box01 h3 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #EB564C;
+  text-align: center;
+  margin: 40px 0 16px;
+}
+
+main .skillUpTask__wrap__box01 .skillUpTask__card {
+  width: 100%;
+  height: 350px;
+  padding: 24px 0;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 10px 3px #D6D6D6;
+          box-shadow: 0 0 10px 3px #D6D6D6;
+}
+
+main .skillUpTask__wrap__box01 .skillUpTask__card__illust {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 40px;
+}
+
+main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box01 {
+  width: 180px;
+  height: 260px;
+  border: 2px dashed #EB564C;
+  border-radius: 8px;
+  padding: 0 16px;
+}
+
+main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box01 p {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #464646;
+  font-weight: bold;
+}
+
+main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box01 p:nth-of-type(1) {
+  margin: 40px 0 24px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box01 p:nth-of-type(1) span {
+  color: #EB564C;
+}
+
+main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box01 p:nth-of-type(2) {
+  font-size: 1.6rem;
+}
+
+main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box02 {
+  width: 240px;
+  height: 260px;
+  border: 2px solid #464646;
+  border-radius: 8px;
+}
+
+main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box02 p {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #464646;
+}
+
+main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box02 p:nth-of-type(1) {
+  margin: 40px 0 24px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box02 p:nth-of-type(2) {
+  font-size: 1.6rem;
+  margin: 0 14px;
+}
+
+main .skillUpTask__wrap__box01 .skillUpTask__card__period {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 16px 16px 0;
+}
+
+main .skillUpTask__wrap__box01 .skillUpTask__card__period p {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #464646;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+main .skillUpTask__wrap__box01 .skillUpTask__card__period__border01 {
+  width: 86px;
+  height: 2px;
+  background: #464646;
+  margin: 0 8px;
+}
+
+main .skillUpTask__wrap__box01 .skillUpTask__card__period__border02 {
+  width: 146px;
+  height: 2px;
+  background: #464646;
+  margin: 0 8px;
+}
+
+main .skillUpTask__wrap__box01 .skillUpTask__text {
+  margin-top: 16px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #464646;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+main .skillUpTask__wrap__box02 {
+  width: 520px;
+}
+
+main .skillUpTask__wrap__box02 h3 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #EBAE4C;
+  text-align: center;
+  margin: 40px 0 16px;
+}
+
+main .skillUpTask__wrap__box02 .skillUpTask__card {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  padding: 16px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 10px 3px #D6D6D6;
+          box-shadow: 0 0 10px 3px #D6D6D6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox01 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox01 p {
+  height: 54px;
+  border: 1px solid #464646;
+  border-radius: 8px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #464646;
+  text-align: center;
+  line-height: 54px;
+}
+
+main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox01 p:nth-of-type(1) {
+  width: 114px;
+}
+
+main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox01 p:nth-of-type(2) {
+  width: 160px;
+  font-size: 1.4rem;
+}
+
+main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox02 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 2px solid #EBAE4C;
+}
+
+main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox02 p {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #464646;
+  text-align: center;
+}
+
+main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox02 p:nth-of-type(1) {
+  margin-top: 24px;
+}
+
+main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox02 p:nth-of-type(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 130px;
+  height: 130px;
+  border: 2px solid #464646;
+  border-radius: 50%;
+  line-height: 130px;
+}
+
+main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox02 p:nth-of-type(2)::after {
+  position: absolute;
+  top: 30%;
+  right: -45%;
+  content: '';
+  display: inline;
+  width: 49px;
+  height: 53px;
+  background: url(../img/key-icon.svg) no-repeat;
+}
+
+main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox03 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox03 p {
+  height: 54px;
+  border: 1px solid #464646;
+  border-radius: 8px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #464646;
+  text-align: center;
+  line-height: 54px;
+}
+
+main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox03 p:nth-of-type(1) {
+  width: 114px;
+}
+
+main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox03 p:nth-of-type(2) {
+  width: 160px;
+  font-size: 1.4rem;
+}
+
+main .skillUpTask__wrap__box02 .skillUpTask__text {
+  margin-top: 16px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #464646;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+main .conclusion {
+  padding-bottom: 120px;
+}
+
+main .conclusion h2::before {
+  right: -17%;
+}
+
+main .conclusion h2::after {
+  right: -40%;
+}
+
+main .conclusion__wrap {
+  width: 1080px;
+  margin: 40px auto 0;
+}
+
+main .conclusion__wrap__list {
+  width: 100%;
+}
+
+main .conclusion__wrap__list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .conclusion__wrap__list ul li p {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #464646;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+main .conclusion__wrap__list ul li div {
+  width: 330px;
+  height: 180px;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right bottom, from(#EB564C), to(#EBAE4C));
+  background: -webkit-linear-gradient(left top, #EB564C, #EBAE4C);
+  background: -o-linear-gradient(left top, #EB564C, #EBAE4C);
+  background: linear-gradient(to right bottom, #EB564C, #EBAE4C);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+main .conclusion__wrap__list ul li div p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 320px;
+  height: 170px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+main .conclusion__wrap__illust {
+  width: 100%;
+}
+
+main .conclusion__wrap__illust h3 {
+  position: relative;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #464646;
+  margin-left: 28px;
+  margin-top: 80px;
+}
+
+main .conclusion__wrap__illust h3::before {
+  position: absolute;
+  top: 50%;
+  left: -28px;
+  content: '';
+  display: inline;
+  width: 20px;
+  height: 4px;
+  background: #EB564C;
+  border-radius: 2px;
+}
+
+main .conclusion__wrap__illust .conclusion__illust__box {
+  position: relative;
+  margin: 32px 0;
+  width: 100%;
+  height: 340px;
+}
+
+main .conclusion__wrap__illust .conclusion__illust__box p {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 10px 3px #D6D6D6;
+          box-shadow: 0 0 10px 3px #D6D6D6;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #464646;
+}
+
+main .conclusion__wrap__illust .conclusion__illust__box p:nth-of-type(1) {
+  position: absolute;
+  left: 22%;
+}
+
+main .conclusion__wrap__illust .conclusion__illust__box p:nth-of-type(2) {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+main .conclusion__wrap__illust .conclusion__illust__box p:nth-of-type(3) {
+  position: absolute;
+  top: 40%;
+  left: 65%;
+}
+
+main .conclusion__wrap__illust .conclusion__illust__box div {
+  position: absolute;
+  width: 250px;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main .conclusion__wrap__illust .conclusion__illust__box div img {
+  width: 250px;
+}
+
+main .conclusion__wrap__text {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #464646;
+  text-align: center;
+}
+
+main .conclusion__wrap__text span {
+  font-size: 4rem;
+}
+
+main .conclusion__wrap button {
+  display: block;
+  padding: 20px 0;
+  width: 255px;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  background: -webkit-gradient(linear, left top, right top, from(#EB564C), to(#EBAE4C));
+  background: -webkit-linear-gradient(left, #EB564C, #EBAE4C);
+  background: -o-linear-gradient(left, #EB564C, #EBAE4C);
+  background: linear-gradient(to right, #EB564C, #EBAE4C);
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 56px auto 0;
+}
+
+main .conclusion__wrap button:hover {
+  opacity: 0.8;
+}
+
+main .conclusion__wrap button a {
+  color: #fff;
+}
+
+footer {
+  position: relative;
+  padding: 0 0 60px 0;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  background-color: #EB564C;
+  overflow: hidden;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer .eb-logo {
+  display: block;
+  margin: 54px auto;
+  width: 185px;
+}
+
+footer .footer-nav {
+  display: inline-block;
+}
+
+footer .footer-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-nav ul li {
+  margin-right: 30px;
+  font-size: 1.4rem;
+}
+
+footer .footer-nav ul li:last-child {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 960px) and (max-width: 1180px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100px;
+  }
+  header .site-logo {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+  }
+  main .mobileIndentAdd {
+    display: none;
+  }
+  main .firstview__wrap__section02 {
+    font-size: 3rem;
+  }
+  main .engineerConcept__wrap {
+    width: 100%;
+  }
+  main .engineerConcept__wrap .engineerConcept__skill__box01 {
+    width: 400px;
+  }
+  main .engineerConcept__wrap .engineerConcept__skill__box02 {
+    width: 400px;
+  }
+  main .skillUpTask__wrap {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .skillUpTask__wrap__box01 {
+    margin: 0 auto;
+  }
+  main .skillUpTask__wrap__box02 {
+    margin: 0 auto;
+  }
+  main .conclusion__wrap {
+    width: 100%;
+  }
+  main .conclusion__wrap .conclusion__wrap__list ul {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .conclusion__wrap .conclusion__wrap__list ul li:nth-of-type(3) {
+    margin-top: 32px;
+  }
+  main .conclusion__wrap .conclusion__wrap__illust .conclusion__illust__box p:nth-of-type(1) {
+    position: absolute;
+    left: 18%;
+  }
+  main .conclusion__wrap .conclusion__wrap__illust .conclusion__illust__box p:nth-of-type(3) {
+    position: absolute;
+    top: 40%;
+    left: 68%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100px;
+  }
+  header .site-logo {
+    position: absolute;
+    top: 20px;
+    left: 35px;
+  }
+  header .nav .menu {
+    width: 90vw;
+    left: 40px;
+  }
+  body {
+    overflow: hidden;
+  }
+  main .mobileIndentAdd {
+    display: none;
+  }
+  main h2 {
+    display: inline;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 3.2rem;
+    color: #000;
+    font-weight: bold;
+    position: relative;
+    z-index: 3;
+  }
+  main h2::before {
+    position: absolute;
+    top: -10%;
+    right: -4%;
+    z-index: -1;
+    content: '';
+    display: inline;
+    width: 50px;
+    height: 50px;
+    background: #F4867E;
+    border-radius: 50%;
+  }
+  main h2::after {
+    position: absolute;
+    top: -50%;
+    right: -11%;
+    z-index: -2;
+    content: '';
+    display: inline;
+    width: 70px;
+    height: 70px;
+    background: #FFEBEA;
+    border-radius: 50%;
+  }
+  main .firstview__wrap__section01__item01 {
+    margin: 0 23px;
+  }
+  main .firstview__wrap__section01__item01 .firstview___item01_text {
+    font-size: 1.6rem;
+  }
+  main .firstview__wrap__section01__item02 {
+    margin: 0 0 80px;
+  }
+  main .firstview__wrap__section01__item03 {
+    margin: 0 23px;
+  }
+  main .firstview__wrap__section01__item03 .firstview__item03_text {
+    font-size: 1.6rem;
+  }
+  main .firstview__wrap__section02 {
+    font-size: 2.2rem;
+  }
+  main .firstview__wrap__section02 span {
+    font-size: 3rem;
+  }
+  main .skillset h3 {
+    font-size: 2.4rem;
+  }
+  main .skillset__section01 {
+    width: 550px;
+    margin: 0 auto 56px;
+  }
+  main .skillset__section01_illsut {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    background: url(../img/skillset01_img.svg) no-repeat;
+    background-position: center center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .skillset__section01_illsut::before {
+    position: absolute;
+    content: 'フィードバック';
+    display: inherit;
+    width: 126px;
+    height: 26px;
+    top: 50%;
+    left: 110px;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #464646;
+    z-index: 3;
+  }
+  main .skillset__section01_illsut::after {
+    position: absolute;
+    content: 'フィードバック';
+    display: inherit;
+    width: 126px;
+    height: 26px;
+    top: 50%;
+    right: -45px;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #464646;
+  }
+  main .skillset__section01_illsut .skillset__illsut_rotate img {
+    width: 66px;
+  }
+  main .skillset__section01_illsut .skillset__illsut_text01 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 24px 16px 0 16px;
+  }
+  main .skillset__section01_illsut .skillset__illsut_text01 p {
+    width: 220px;
+    height: 100px;
+    background: #F1EEE7;
+    padding-top: 25px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #464646;
+    text-align: center;
+    opacity: 0.9;
+  }
+  main .skillset__section01_illsut .skillset__illsut_text01 p:nth-of-type(2) {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    z-index: 2;
+    width: 79px;
+    background: none;
+    padding: 0;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText p {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 10px 5px #D6D6D6;
+            box-shadow: 0 0 10px 5px #D6D6D6;
+    background: #fff;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #EB564C;
+    text-align: center;
+    line-height: 200px;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText div img {
+    width: 100px;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText div:nth-of-type(1) {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText div:nth-of-type(2) {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText div:nth-of-type(3) {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    z-index: 2;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText div:nth-of-type(4) {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    z-index: 1;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText::before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    display: inherit;
+    width: 79px;
+    height: 100px;
+    top: 30%;
+    left: -120px;
+    background: url(../img/skillset02_img.svg) no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText::after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    display: inherit;
+    width: 79px;
+    height: 100px;
+    top: 30%;
+    right: -120px;
+    background: url(../img/skillset02_img.svg) no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  main .skillset__section01_illsut .skillset__illsut_text02 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 16px 24px 16px;
+  }
+  main .skillset__section01_illsut .skillset__illsut_text02 p {
+    position: relative;
+    z-index: -1;
+    width: 220px;
+    height: 100px;
+    background: #F1EEE7;
+    padding-top: 25px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #464646;
+    text-align: center;
+    opacity: 0.9;
+  }
+  main .skillset__section01_illsut .skillset__illsut_text02 p:nth-of-type(2) {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    z-index: 2;
+    width: 79px;
+    background: none;
+    padding-top: 0;
+  }
+  main .skillset__section01__text {
+    width: 100%;
+    margin: 16px auto 0;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: #464646;
+  }
+  main .skillset__section02 {
+    width: 550px;
+    margin: 0 auto;
+  }
+  main .skillset__section02_illsut {
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list__item {
+    padding: 12px 16px;
+    -webkit-box-shadow: 0 0 10px 2px #D6D6D6;
+            box-shadow: 0 0 10px 2px #D6D6D6;
+    border-radius: 8px;
+    margin: 12px 0;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #464646;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list__item:nth-of-type(9) {
+    font-size: 2.2rem;
+    color: #EB564C;
+    padding: 20px 24px;
+    -webkit-box-shadow: 0 0 10px 2px #EB564C;
+            box-shadow: 0 0 10px 2px #EB564C;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUpTrigger {
+    opacity: 0;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(1) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(2) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(3) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(4) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(5) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(6) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(7) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(8) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(9) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(10) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(11) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(12) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(13) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(14) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(15) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(16) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(17) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(18) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;
+  }
+  main .skillset__section02__text {
+    width: 100%;
+    margin: 16px auto 0;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: #464646;
+  }
+  main .engineerConcept__wrap {
+    width: 100%;
+  }
+  main .engineerConcept__wrap h3 {
+    font-size: 2rem;
+  }
+  main .engineerConcept__wrap .engineerConcept__wrap__list li {
+    font-size: 1.6rem;
+  }
+  main .engineerConcept__wrap__skill {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .engineerConcept__wrap__skill .engineerConcept__skill__box01 {
+    width: 320px;
+    height: 200px;
+  }
+  main .engineerConcept__wrap__skill .engineerConcept__skill__box01 h4 {
+    font-size: 2.4rem;
+  }
+  main .engineerConcept__wrap__skill .engineerConcept__skill__box01 p {
+    font-size: 1.8rem;
+  }
+  main .engineerConcept__wrap__skill .engineerConcept__skill__box02 {
+    width: 320px;
+    height: 200px;
+    margin-top: 24px;
+  }
+  main .engineerConcept__wrap__skill .engineerConcept__skill__box02 h4 {
+    font-size: 2.4rem;
+  }
+  main .engineerConcept__wrap__skill .engineerConcept__skill__box02 p {
+    font-size: 1.8rem;
+  }
+  main .engineerConcept__wrap__text {
+    font-size: 2.4rem;
+  }
+  main .skillUpTask__wrap {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .skillUpTask__wrap__box01 {
+    margin: 0 auto;
+  }
+  main .skillUpTask__wrap__box02 {
+    margin: 0 auto;
+  }
+  main .conclusion__wrap {
+    width: 100%;
+  }
+  main .conclusion__wrap .conclusion__wrap__list ul {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .conclusion__wrap .conclusion__wrap__list ul li:nth-of-type(2) {
+    margin-top: 32px;
+  }
+  main .conclusion__wrap .conclusion__wrap__list ul li:nth-of-type(3) {
+    margin-top: 32px;
+  }
+  main .conclusion__wrap .conclusion__wrap__illust h3 {
+    font-size: 2rem;
+  }
+  main .conclusion__wrap .conclusion__wrap__illust .conclusion__illust__box {
+    position: relative;
+    width: 550px;
+    height: 340px;
+    margin: 32px auto;
+  }
+  main .conclusion__wrap .conclusion__wrap__illust .conclusion__illust__box p {
+    display: inline-block;
+    -webkit-box-shadow: 0 0 10px 3px #D6D6D6;
+            box-shadow: 0 0 10px 3px #D6D6D6;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #464646;
+  }
+  main .conclusion__wrap .conclusion__wrap__illust .conclusion__illust__box p:nth-of-type(1) {
+    position: absolute;
+    width: 96%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+  main .conclusion__wrap .conclusion__wrap__illust .conclusion__illust__box p:nth-of-type(2) {
+    position: absolute;
+    top: 25%;
+    left: 0;
+  }
+  main .conclusion__wrap .conclusion__wrap__illust .conclusion__illust__box p:nth-of-type(3) {
+    position: absolute;
+    top: 30%;
+    left: 57%;
+  }
+  main .conclusion__wrap .conclusion__wrap__illust .conclusion__illust__box div {
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  main .conclusion__wrap .conclusion__wrap__illust .conclusion__illust__box div img {
+    width: 200px;
+  }
+  main .conclusion__wrap__text {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #464646;
+    text-align: center;
+  }
+  main .conclusion__wrap__text span {
+    font-size: 3rem;
+  }
+  footer .footer-nav {
+    width: 100%;
+  }
+  footer .footer-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  footer .footer-nav ul li {
+    display: inline-block;
+    width: 32%;
+  }
+  footer .footer-nav ul li:nth-of-type(3n) {
+    margin-right: 0;
+  }
+  footer .footer-nav ul li:nth-of-type(3n+1) {
+    margin-right: 2%;
+  }
+  footer .footer-nav ul li:nth-of-type(3n+2) {
+    margin-right: 2%;
+  }
+  footer .footer-nav ul li:nth-of-type(-n+3) {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  header h1 .site-logo {
+    top: 20px;
+    left: 16px;
+  }
+  header h1 .site-logo img {
+    width: 140px;
+  }
+  header .hamburger {
+    width: 40px;
+    height: 40px;
+    top: 16px;
+    right: 16px;
+  }
+  header .hamburger span {
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 1px;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  header .hamburger span:nth-of-type(1) {
+    top: 12px;
+  }
+  header .hamburger span:nth-of-type(2) {
+    top: 20px;
+  }
+  header .hamburger span:nth-of-type(3) {
+    top: 28px;
+  }
+  header .active span:nth-of-type(1) {
+    top: 15px;
+  }
+  header .active span:nth-of-type(2) {
+    top: 15px;
+  }
+  header .active span:nth-of-type(3) {
+    top: 15px;
+  }
+  header .nav .site-logo {
+    top: 20px;
+    left: 16px;
+  }
+  header .nav .site-logo img {
+    width: 140px;
+  }
+  header .nav .menu {
+    width: 84vw;
+    top: 100px;
+    left: 8vw;
+  }
+  header .nav .menu li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 16px;
+    font-size: 1.8rem;
+  }
+  header .nav .menu li .mr::after {
+    top: 25px;
+    left: -155px;
+    width: 25px;
+  }
+  header .nav .menu li .birth {
+    margin-left: 50px;
+  }
+  header .nav .menu li .app {
+    margin-bottom: 24px;
+  }
+  header .nav .menu li .btn {
+    width: 100%;
+  }
+  body {
+    overflow: hidden;
+  }
+  .mobileIndent {
+    display: none;
+  }
+  .mobileIndentAdd {
+    display: block;
+  }
+  main h2 {
+    display: inline;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 2rem;
+    color: #000;
+    font-weight: bold;
+    position: relative;
+    z-index: 3;
+  }
+  main h2::before {
+    position: absolute;
+    top: -10%;
+    right: -4%;
+    z-index: -1;
+    content: '';
+    display: inline;
+    width: 30px;
+    height: 30px;
+    background: #F4867E;
+    border-radius: 50%;
+  }
+  main h2::after {
+    position: absolute;
+    top: -50%;
+    right: -11%;
+    z-index: -2;
+    content: '';
+    display: inline;
+    width: 40px;
+    height: 40px;
+    background: #FFEBEA;
+    border-radius: 50%;
+  }
+  main .firstview {
+    margin-bottom: 80px;
+  }
+  main .firstview .firstview__wrap__section01 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 24px 0;
+  }
+  main .firstview .firstview__wrap__section01 .firstview__wrap__section01__item01 {
+    margin: 0 23px;
+  }
+  main .firstview .firstview__wrap__section01 .firstview__wrap__section01__item01 .firstview__item01__circle {
+    width: 150px;
+    height: 150px;
+    font-size: 2rem;
+    line-height: 150px;
+  }
+  main .firstview .firstview__wrap__section01 .firstview__wrap__section01__item01 .firstview___item01_text {
+    font-size: 1.6rem;
+    margin-top: 16px;
+  }
+  main .firstview .firstview__wrap__section01 .firstview__wrap__section01__item02 {
+    margin: 24px 0 24px;
+  }
+  main .firstview .firstview__wrap__section01 .firstview__wrap__section01__item03 {
+    margin: 0 23px;
+  }
+  main .firstview .firstview__wrap__section01 .firstview__wrap__section01__item03 .firstview__item03_circle {
+    width: 150px;
+    height: 150px;
+    font-size: 2rem;
+    line-height: 150px;
+  }
+  main .firstview .firstview__wrap__section01 .firstview__wrap__section01__item03 .firstview__item03_text {
+    font-size: 1.6rem;
+    margin-top: 16px;
+  }
+  main .firstview .firstview__wrap__section02 {
+    font-size: 1.6rem;
+    text-align: left;
+  }
+  main .firstview .firstview__wrap__section02 span {
+    font-size: 2rem;
+  }
+  main .skillset h3 {
+    font-size: 2rem;
+    margin: 32px 0 0;
+  }
+  main .skillset__section01 {
+    width: 290px;
+    margin: 0 auto 56px;
+  }
+  main .skillset__section01_illsut {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 270px;
+    margin: 0 auto;
+    background: url(../img/skillset01_img.svg) no-repeat;
+    background-position: center center;
+    background-size: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .skillset__section01_illsut::before {
+    position: absolute;
+    content: 'フィードバック';
+    display: inherit;
+    width: 126px;
+    height: 26px;
+    top: 45%;
+    left: 50px;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #464646;
+    z-index: 3;
+  }
+  main .skillset__section01_illsut::after {
+    position: absolute;
+    content: 'フィードバック';
+    display: inherit;
+    width: 126px;
+    height: 26px;
+    top: 45%;
+    right: -115px;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #464646;
+  }
+  main .skillset__section01_illsut .skillset__illsut_rotate img {
+    width: 40px;
+  }
+  main .skillset__section01_illsut .skillset__illsut_text01 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 24px 16px 0 16px;
+  }
+  main .skillset__section01_illsut .skillset__illsut_text01 p {
+    width: 125px;
+    height: 44px;
+    background: #F1EEE7;
+    padding-top: 8px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #464646;
+    text-align: center;
+    opacity: 0.9;
+  }
+  main .skillset__section01_illsut .skillset__illsut_text01 p:nth-of-type(2) {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    z-index: 2;
+    width: 79px;
+    background: none;
+    padding: 0;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 110px;
+    height: 110px;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText p {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 10px 5px #D6D6D6;
+            box-shadow: 0 0 10px 5px #D6D6D6;
+    background: #fff;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #EB564C;
+    text-align: center;
+    line-height: 110px;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText div img {
+    width: 70px;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText div:nth-of-type(1) {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText div:nth-of-type(2) {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText div:nth-of-type(3) {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    z-index: 2;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText div:nth-of-type(4) {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    z-index: 1;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText::before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    display: inherit;
+    width: 40px;
+    height: 40px;
+    top: 30%;
+    left: -60px;
+    background: url(../img/skillset02_img.svg) no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  main .skillset__section01_illsut .skillset__illsut_cnterText::after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    display: inherit;
+    width: 40px;
+    height: 40px;
+    top: 30%;
+    right: -60px;
+    background: url(../img/skillset02_img.svg) no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  main .skillset__section01_illsut .skillset__illsut_text02 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 16px 24px 16px;
+  }
+  main .skillset__section01_illsut .skillset__illsut_text02 p {
+    position: relative;
+    z-index: -1;
+    width: 125px;
+    height: 44px;
+    background: #F1EEE7;
+    padding-top: 8px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #464646;
+    text-align: center;
+    opacity: 0.9;
+  }
+  main .skillset__section01_illsut .skillset__illsut_text02 p:nth-of-type(2) {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    z-index: 2;
+    width: 79px;
+    background: none;
+    padding-top: 0;
+  }
+  main .skillset__section01__text {
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: #464646;
+  }
+  main .skillset__section01 .skillset__sourceText {
+    text-align: right;
+    margin-top: 8px;
+  }
+  main .skillset__section01 .skillset__sourceText a {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #659AD8;
+  }
+  main .skillset__section02 {
+    width: 280px;
+    margin: 0 auto;
+  }
+  main .skillset__section02_illsut {
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list__item {
+    padding: 8px 16px;
+    -webkit-box-shadow: 0 0 10px 2px #D6D6D6;
+            box-shadow: 0 0 10px 2px #D6D6D6;
+    border-radius: 8px;
+    margin: 8px 0;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #464646;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list__item:nth-of-type(1) {
+    padding: 8px 24px;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list__item:nth-of-type(3) {
+    font-size: 1.2rem;
+    padding: 10px 12px;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list__item:nth-of-type(5) {
+    padding: 8px 24px;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list__item:nth-of-type(6) {
+    padding: 8px 24px;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list__item:nth-of-type(7) {
+    padding: 8px 12px;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list__item:nth-of-type(8) {
+    padding: 8px 12px;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list__item:nth-of-type(9) {
+    font-size: 1.8rem;
+    color: #EB564C;
+    padding: 20px 24px;
+    -webkit-box-shadow: 0 0 10px 2px #EB564C;
+            box-shadow: 0 0 10px 2px #EB564C;
+    margin: 8px auto;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list__item:nth-of-type(10) {
+    padding: 8px 16px;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list__item:nth-of-type(11) {
+    padding: 8px 24px;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list__item:nth-of-type(12) {
+    font-size: 1.2rem;
+    padding: 10px 8px;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list__item:nth-of-type(13) {
+    font-size: 1.2rem;
+    padding: 10px 16px;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list__item:nth-of-type(16) {
+    font-size: 1.2rem;
+    padding: 10px 12px;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUpTrigger {
+    opacity: 0;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(1) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(2) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(3) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(4) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(5) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(6) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(7) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(8) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(9) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(10) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(11) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(12) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(13) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(14) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(15) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(16) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(17) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+  }
+  main .skillset__section02_illsut .skillset__illsut__list .fadeUp:nth-of-type(18) {
+    -webkit-animation: fadeUpAnime 2s forwards;
+    animation: fadeUpAnime 2s forwards;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;
+  }
+  main .skillset__section02__text {
+    width: 100%;
+    margin: 16px auto 0;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: #464646;
+  }
+  main .skillset__section02 .skillset__sourceText {
+    text-align: right;
+    margin-top: 8px;
+  }
+  main .skillset__section02 .skillset__sourceText a {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #659AD8;
+  }
+  main .engineerConcept__wrap {
+    width: 100%;
+  }
+  main .engineerConcept__wrap h3 {
+    font-size: 1.8rem;
+  }
+  main .engineerConcept__wrap .engineerConcept__wrap__list li {
+    font-size: 1.4rem;
+  }
+  main .engineerConcept__wrap__skill {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .engineerConcept__wrap__skill .engineerConcept__skill__box01 {
+    width: 320px;
+    height: 200px;
+  }
+  main .engineerConcept__wrap__skill .engineerConcept__skill__box01 h4 {
+    font-size: 2.4rem;
+  }
+  main .engineerConcept__wrap__skill .engineerConcept__skill__box01 p {
+    font-size: 1.8rem;
+  }
+  main .engineerConcept__wrap__skill .engineerConcept__skill__box02 {
+    width: 320px;
+    height: 200px;
+    margin-top: 24px;
+  }
+  main .engineerConcept__wrap__skill .engineerConcept__skill__box02 h4 {
+    font-size: 2.4rem;
+  }
+  main .engineerConcept__wrap__skill .engineerConcept__skill__box02 p {
+    font-size: 1.8rem;
+  }
+  main .engineerConcept__wrap__text {
+    font-size: 2rem;
+    text-align: left;
+  }
+  main .skillUpTask__wrap {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .skillUpTask__wrap__box01 {
+    width: 280px;
+    margin: 0 auto;
+  }
+  main .skillUpTask__wrap__box01 h3 {
+    font-size: 2.2rem;
+    margin: 32px 0 16px;
+  }
+  main .skillUpTask__wrap__box01 .skillUpTask__card {
+    width: 100%;
+    height: 240px;
+    padding: 24px 0;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 0 10px 3px #D6D6D6;
+            box-shadow: 0 0 10px 3px #D6D6D6;
+  }
+  main .skillUpTask__wrap__box01 .skillUpTask__card__illust {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 16px;
+  }
+  main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box01 {
+    width: 100px;
+    height: 160px;
+    border: 2px dashed #EB564C;
+    border-radius: 8px;
+    padding: 0 8px;
+  }
+  main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box01 p {
+    font-family: "Noto Sans JP", sans-serif;
+    color: #464646;
+    font-weight: bold;
+  }
+  main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box01 p:nth-of-type(1) {
+    margin: 24px 0 16px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box01 p:nth-of-type(1) span {
+    color: #EB564C;
+  }
+  main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box01 p:nth-of-type(2) {
+    font-size: 1rem;
+  }
+  main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box02 {
+    width: 140px;
+    height: 160px;
+    border: 2px solid #464646;
+    border-radius: 8px;
+  }
+  main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box02 p {
+    font-family: "Noto Sans JP", sans-serif;
+    color: #464646;
+  }
+  main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box02 p:nth-of-type(1) {
+    margin: 24px 0 16px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  main .skillUpTask__wrap__box01 .skillUpTask__card__illust__box02 p:nth-of-type(2) {
+    font-size: 1.1rem;
+    margin: 0 14px;
+  }
+  main .skillUpTask__wrap__box01 .skillUpTask__card__period {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 16px 16px 0;
+  }
+  main .skillUpTask__wrap__box01 .skillUpTask__card__period p {
+    font-family: "Noto Sans JP", sans-serif;
+    color: #464646;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  main .skillUpTask__wrap__box01 .skillUpTask__card__period__border01 {
+    width: 20px;
+    height: 2px;
+    background: #464646;
+    margin: 0 8px;
+  }
+  main .skillUpTask__wrap__box01 .skillUpTask__card__period__border02 {
+    width: 60px;
+    height: 2px;
+    background: #464646;
+    margin: 0 8px;
+  }
+  main .skillUpTask__wrap__box01 .skillUpTask__text {
+    margin-top: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #464646;
+    font-size: 1.6rem;
+    font-weight: normal;
+  }
+  main .skillUpTask__wrap__box02 {
+    width: 280px;
+    margin: 0 auto;
+  }
+  main .skillUpTask__wrap__box02 h3 {
+    font-size: 2.2rem;
+    margin: 32px 0 16px;
+  }
+  main .skillUpTask__wrap__box02 .skillUpTask__card {
+    width: 100%;
+    height: 250px;
+    padding: 8px;
+  }
+  main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox01 {
+    width: 100%;
+  }
+  main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox01 p {
+    height: 30px;
+    border-radius: 4px;
+    font-size: 1rem;
+    line-height: 30px;
+  }
+  main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox01 p:nth-of-type(1) {
+    width: 72px;
+  }
+  main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox01 p:nth-of-type(2) {
+    width: 110px;
+    font-size: 1rem;
+  }
+  main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox02 {
+    width: 170px;
+    height: 170px;
+  }
+  main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox02 p {
+    font-size: 1rem;
+  }
+  main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox02 p:nth-of-type(1) {
+    margin-top: 16px;
+  }
+  main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox02 p:nth-of-type(2) {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+  }
+  main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox02 p:nth-of-type(2)::after {
+    top: 30%;
+    right: -45%;
+    width: 25px;
+    height: 36px;
+    background: url(../img/key-icon.svg) no-repeat;
+    background-size: 100%;
+  }
+  main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox03 p {
+    height: 30px;
+    border-radius: 4px;
+    font-size: 1rem;
+    line-height: 30px;
+  }
+  main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox03 p:nth-of-type(1) {
+    width: 72px;
+  }
+  main .skillUpTask__wrap__box02 .skillUpTask__card__illsutBox03 p:nth-of-type(2) {
+    width: 110px;
+    font-size: 1rem;
+  }
+  main .skillUpTask__wrap__box02 .skillUpTask__text {
+    margin-top: 16px;
+    font-size: 1.6rem;
+  }
+  main .conclusion__wrap {
+    width: 100%;
+  }
+  main .conclusion__wrap .conclusion__wrap__list ul {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .conclusion__wrap .conclusion__wrap__list ul li:nth-of-type(2) {
+    margin-top: 32px;
+  }
+  main .conclusion__wrap .conclusion__wrap__list ul li:nth-of-type(3) {
+    margin-top: 32px;
+  }
+  main .conclusion__wrap .conclusion__wrap__list ul li p {
+    font-family: "Noto Sans JP", sans-serif;
+    color: #464646;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  main .conclusion__wrap .conclusion__wrap__list ul li div {
+    width: 280px;
+    height: 180px;
+    text-align: center;
+    background: -webkit-gradient(linear, left top, right bottom, from(#EB564C), to(#EBAE4C));
+    background: -webkit-linear-gradient(left top, #EB564C, #EBAE4C);
+    background: -o-linear-gradient(left top, #EB564C, #EBAE4C);
+    background: linear-gradient(to right bottom, #EB564C, #EBAE4C);
+    border-radius: 8px;
+    padding: 5px;
+  }
+  main .conclusion__wrap .conclusion__wrap__list ul li div p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 270px;
+    height: 170px;
+    background: #fff;
+    border-radius: 8px;
+  }
+  main .conclusion__wrap .conclusion__wrap__illust h3 {
+    font-size: 2rem;
+  }
+  main .conclusion__wrap .conclusion__wrap__illust .conclusion__illust__box {
+    position: relative;
+    width: 280px;
+    height: 500px;
+    margin: 32px auto;
+  }
+  main .conclusion__wrap .conclusion__wrap__illust .conclusion__illust__box p {
+    display: inline-block;
+    -webkit-box-shadow: 0 0 10px 3px #D6D6D6;
+            box-shadow: 0 0 10px 3px #D6D6D6;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #464646;
+  }
+  main .conclusion__wrap .conclusion__wrap__illust .conclusion__illust__box p:nth-of-type(1) {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+  main .conclusion__wrap .conclusion__wrap__illust .conclusion__illust__box p:nth-of-type(2) {
+    position: absolute;
+    top: 25%;
+    left: 0;
+  }
+  main .conclusion__wrap .conclusion__wrap__illust .conclusion__illust__box p:nth-of-type(3) {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+  }
+  main .conclusion__wrap .conclusion__wrap__illust .conclusion__illust__box div {
+    position: absolute;
+    width: 200px;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  main .conclusion__wrap .conclusion__wrap__illust .conclusion__illust__box div img {
+    width: 200px;
+  }
+  main .conclusion__wrap__text {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #464646;
+    text-align: center;
+  }
+  main .conclusion__wrap__text span {
+    font-size: 2.6rem;
+  }
+  main .conclusion__wrap button {
+    display: block;
+    padding: 20px 0;
+    width: 280px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    -webkit-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    background: -webkit-gradient(linear, left top, right top, from(#EB564C), to(#EBAE4C));
+    background: -webkit-linear-gradient(left, #EB564C, #EBAE4C);
+    background: -o-linear-gradient(left, #EB564C, #EBAE4C);
+    background: linear-gradient(to right, #EB564C, #EBAE4C);
+    margin: 56px auto 0;
+  }
+  main .conclusion__wrap button:hover {
+    opacity: 0.8;
+  }
+  main .conclusion__wrap button a {
+    color: #fff;
+  }
+  footer {
+    padding: 0 5%;
+  }
+  footer .footer-nav {
+    width: 100%;
+    text-align: left;
+  }
+  footer .footer-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  footer .footer-nav ul li {
+    display: inline-block;
+    width: 100%;
+  }
+  footer .footer-nav ul li:nth-of-type(n) {
+    margin-bottom: 24px;
+  }
+  footer .footer-nav ul li a {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  main h2 {
+    font-size: 1.8rem;
+  }
+}

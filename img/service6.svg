@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-6 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #eb564c;
+      }
+
+      .cls-1 {
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+        stroke-width: 8px;
+      }
+
+      .cls-3 {
+        fill: #91231c;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="グループ_134" data-name="グループ 134" transform="translate(-454 -3680)">
+    <g id="長方形_43" data-name="長方形 43" class="cls-1" transform="translate(454 3680)">
+      <rect class="cls-5" width="100" height="100" rx="50"/>
+      <rect class="cls-6" x="1.5" y="1.5" width="97" height="97" rx="48.5"/>
+    </g>
+    <g id="グループ_60" data-name="グループ 60" transform="translate(3065.211 968.954) rotate(51)">
+      <line id="線_15" data-name="線 15" class="cls-2" y1="19.163" transform="translate(533.436 3731.187)"/>
+      <circle id="楕円形_34" data-name="楕円形 34" class="cls-3" cx="16.436" cy="16.436" r="16.436" transform="translate(517 3706)"/>
+      <circle id="楕円形_35" data-name="楕円形 35" class="cls-4" cx="10.164" cy="10.164" r="10.164" transform="translate(523.272 3712.272)"/>
+    </g>
+  </g>
+</svg>
